@@ -7,9 +7,9 @@
       ansible.builtin.package:
         name: postfix
         state: latest
-      when: inventory_hostname in groups["web"]
+      when: inventory_hostname in groups['web']
     - name: Install database in corresponding group
       ansible.builtin.package:
         name: postgresql
         state: latest
-      when: inventory_hostname in groups["database"]
+      when: inventory_hostname in groups['database']
