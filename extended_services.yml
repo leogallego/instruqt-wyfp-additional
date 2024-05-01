@@ -2,6 +2,7 @@
 - name: Install extended services
   hosts: all
   become: true
+  gather_facts: true
   tasks:
     - name: Install Postfix
       ansible.builtin.package:
